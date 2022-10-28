@@ -208,10 +208,16 @@ template {
   align-items: center;
 }
 
+.cell img {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
 .black {
-  background-color: whitesmoke;
+  background-color: Bisque;
 }
 
 .white {
-  background-color: black;
+  background-color: CadetBlue;
 }
