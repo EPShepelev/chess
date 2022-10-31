@@ -61,6 +61,8 @@ export class Board {
     new Rook(Colors.WHITE, this.getCell(7, 7));
   }
 
+  public addFisherFigures() {}
+
   public addFigures() {
     this.addBishop();
     this.addKings();

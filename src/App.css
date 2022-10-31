@@ -221,3 +221,7 @@ template {
 .white {
   background-color: CadetBlue;
 }
+
+.selected {
+  background-color: brown;
+}
