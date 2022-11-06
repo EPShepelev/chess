@@ -12,6 +12,14 @@ export const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
   const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
   function click(cell: Cell) {
+    if (
+      selectedCell &&
+      selectedCell !== cell &&
+      selectedCell.figure?.canMove(cell)
+    ) {
+      selectedCell.moveFigure(cell);
+      setSelectedCell(null);
+    }
     if (cell.figure) {
       setSelectedCell(cell);
     }
