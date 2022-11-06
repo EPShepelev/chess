@@ -19,10 +19,9 @@ export const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
     ) {
       selectedCell.moveFigure(cell);
       setSelectedCell(null);
+    } else {
     }
-    if (cell.figure) {
-      setSelectedCell(cell);
-    }
+    setSelectedCell(cell);
   }
 
   useEffect(() => {
