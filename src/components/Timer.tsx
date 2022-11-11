@@ -43,7 +43,7 @@ export const Timer: FC<TimerProps> = ({ currentPlayer, restart }) => {
   return (
     <div>
       <div>
-        <button onClick={handleRestart}>Конец хода</button>
+        <button onClick={handleRestart}>Рестарт</button>
       </div>
       <h2>Черные - {blackTime}</h2>
       <h2>Белые - {whiteTime}</h2>
