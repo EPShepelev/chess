@@ -191,6 +191,7 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 25px;
 }
 
 .board {
@@ -231,4 +232,10 @@ template {
   height: 12px;
   border-radius: 50%;
   background-color: lawngreen;
+}
+
+.lost {
+  height: calc(50vh - 60px);
+  padding: 15px;
+  background-color: lightgray;
 }
