@@ -22,9 +22,21 @@ const App = () => {
     newBoard.addFigures();
     setBoard(newBoard);
   }
+
+  function swapPlayer() {
+    setCurrentPlayer(
+      currentPlayer?.color === Colors.WHITE ? blackPlayer : whitePlayer
+    );
+  }
+
   return (
     <div className="app">
-      <BoardComponent board={board} setBoard={setBoard} />
+      <BoardComponent
+        board={board}
+        setBoard={setBoard}
+        currentPlayer={currentPlayer}
+        swapPlayer={swapPlayer}
+      />
     </div>
   );
 };

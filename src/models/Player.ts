@@ -1,9 +1,9 @@
 import { Colors } from "./Colors";
 
 export class Player {
-  colors: Colors;
+  color: Colors;
 
   constructor(color: Colors) {
-    this.colors = color;
+    this.color = color;
   }
 }
