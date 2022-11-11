@@ -51,21 +51,24 @@ export const BoardComponent: FC<BoardProps> = ({
   }
 
   return (
-    <div className="board">
-      {board.cells.map((row, index) => (
-        <React.Fragment key={index}>
-          {row.map((cell) => (
-            <CellComponent
-              cell={cell}
-              key={cell.id}
-              selected={
-                cell.x === selectedCell?.x && cell.y === selectedCell?.y
-              }
-              click={click}
-            />
-          ))}
-        </React.Fragment>
-      ))}
+    <div>
+      <h3>Текущий игрок {currentPlayer?.color}</h3>
+      <div className="board">
+        {board.cells.map((row, index) => (
+          <React.Fragment key={index}>
+            {row.map((cell) => (
+              <CellComponent
+                cell={cell}
+                key={cell.id}
+                selected={
+                  cell.x === selectedCell?.x && cell.y === selectedCell?.y
+                }
+                click={click}
+              />
+            ))}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 };
